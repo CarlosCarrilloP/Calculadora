@@ -1,7 +1,12 @@
 .screen {
   height: 50px;
-  width: 150px;
+  width: 140px;
   margin-bottom: 10px;
+  text-align: right;
+  font-size: 24px;
+  padding-right: 10px;
+  background-color: #eee;
+  border: 1px solid #ccc;
 }
 
 .keys {
@@ -15,6 +20,7 @@
   border-radius: 50%;
   background-color: rgb(215, 215, 215);
   font-weight: bold;
+  font-size: medium;
 }
 .btn:hover {
   background-color: rgb(255, 255, 255);
@@ -28,6 +34,7 @@
   background-color: rgb(244, 178, 55);
   border-radius: 50%;
   font-weight: bold;
+  font-size: medium;
 }
 .operator:hover {
   background-color: rgb(255, 255, 255);
