@@ -41,6 +41,21 @@
   color: rgb(244, 178, 55);
 }
 
+.delete {
+  width: 200px;
+  height: 50px;
+  margin-bottom: 5px;
+  background-color: rgb(244, 178, 55);
+  border-radius: 10%;
+  font-weight: bold;
+  font-size: large;
+  margin-left:5px;
+}
+.delete:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(244, 178, 55);
+}
+
 body {
   display: flex;
   justify-content: center;

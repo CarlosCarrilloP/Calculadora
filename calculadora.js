@@ -1,6 +1,7 @@
 // Obtener elementos del DOM
 const screen = document.querySelector(".screen");
 const clearButton = document.querySelector(".container input[value='C']");
+const clearOne = document.querySelector(".container input[value='⇽']");
 const operator = document.querySelectorAll(".operator");
 const equalButton = document.querySelector(".container input[value='=']");
 const btn = document.querySelectorAll(".btn");
@@ -32,6 +33,10 @@ for (let i = 0; i < operator.length; i++) {
 clearButton.addEventListener("click", () => {
   screen.value = "";
 });
+
+//Funcion que borra un numero en .screen
+clearOne.addEventListener("click", () => {
+  screen.value = screen.value.slice(0, -1); });
 
 //Funcion igual que devuelve el resultado
 equalButton.addEventListener("click", () => {
