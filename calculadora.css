@@ -1,6 +1,6 @@
 .screen {
   height: 50px;
-  width: 140px;
+  width: 190px;
   margin-bottom: 10px;
   text-align: right;
   font-size: 24px;
@@ -42,11 +42,11 @@
 }
 
 .delete {
-  width: 200px;
+  width: 50px;
   height: 50px;
   margin-bottom: 5px;
   background-color: rgb(244, 178, 55);
-  border-radius: 10%;
+  border-radius: 50%;
   font-weight: bold;
   font-size: large;
   margin-left:5px;
