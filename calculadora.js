@@ -17,8 +17,8 @@ sumButton.addEventListener("click", sumar);
 subtractButton.addEventListener("click", restar);
 multiplyButton.addEventListener("click", multiplicar);
 divideButton.addEventListener("click", dividir);
-raizButton.addEventListener("click",raizCuadrada);
-cuadradoButton.addEventListener("click",calcularCuadrado);
+raizButton.addEventListener("click", raizCuadrada);
+cuadradoButton.addEventListener("click", calcularCuadrado);
 
 //Bucle que recorre la clase .btn detectando cada click
 for (let i = 0; i < btn.length; i++) {
@@ -39,8 +39,8 @@ clearButton.addEventListener("click", () => {
 
 //Funcion que borra un numero en .screen
 clearOne.addEventListener("click", () => {
-  screen.value = screen.value.slice(0, -1); });
-
+  screen.value = screen.value.slice(0, -1);
+});
 
 ///////////////Funciones matematicas////////
 //Funcion suma
@@ -54,24 +54,22 @@ function sumar() {
   screen.value = resultado; // Se asigna el resultado a la pantalla
 }
 
-
-
 //Funcion resta
 function restar() {
   const valorActual = parseFloat(screen.value);
   const valores = screen.value.split("-");
   let resultado = parseFloat(valores[0]); // Inicializamos el resultado con el primer número
-  for (let i = 1; i < valores.length; i++) { // Empezamos en 1 para evitar el primer número que ya está en el resultado
+  for (let i = 1; i < valores.length; i++) {
+    // Empezamos en 1 para evitar el primer número que ya está en el resultado
     resultado -= parseFloat(valores[i]);
   }
   screen.value = resultado; // Se asigna el resultado a la pantalla
 }
 
-
 //Funcion multiplicacion
 function multiplicar() {
-  const screen = document.getElementsByClassName('screen'); // Se obtiene el elemento con nombre de la clase 'screen'
-  const valores = screen.value.split('*'); // Se separan los valores de la pantalla por el operador *
+  const screen = document.getElementsByClassName("screen"); // Se obtiene el elemento con nombre de la clase 'screen'
+  const valores = screen.value.split("*"); // Se separan los valores de la pantalla por el operador *
   let resultado = 1;
 
   for (let i = 0; i < valores.length; i++) {
@@ -82,14 +80,14 @@ function multiplicar() {
   screen.value = resultado; // Se asigna el resultado a la pantalla
 }
 
-
 //Funcion division
 function dividir() {
-  const screen = document.getElementsByClassName('screen'); // Se obtiene el elemento con nombre de clase 'screen'
-  const valores = screen.value.split('/'); // Se separan los valores de la pantalla por el operador /
+  const screen = document.getElementsByClassName("screen"); // Se obtiene el elemento con nombre de clase 'screen'
+  const valores = screen.value.split("/"); // Se separan los valores de la pantalla por el operador /
   let resultado = parseFloat(valores[0]); // Inicializamos el resultado con el primer número
 
-  for (let i = 1; i < valores.length; i++) { // Empezamos en 1 para evitar el primer número que ya está en el resultado
+  for (let i = 1; i < valores.length; i++) {
+    // Empezamos en 1 para evitar el primer número que ya está en el resultado
     const valorActual = parseFloat(valores[i]); // Se convierte cada valor a número
     resultado /= valorActual; // Se realiza la división de cada valor
   }
@@ -100,24 +98,19 @@ function dividir() {
 //Funcion Raiz cuadrada
 
 function raizCuadrada() {
-  const screen = document.getElementsByClassName('screen'); // Se obtiene el primer elemento con nombre de clase 'screen'
+  const screen = document.getElementsByClassName("screen"); // Se obtiene el primer elemento con nombre de clase 'screen'
   const valores = screen.value.substring(1); // Se toma la cadena a partir del segundo caracter (posición 1)
   let resultado = Math.sqrt(parseFloat(valores)); // Se calcula la raíz cuadrada del valor numérico
   screen.value = resultado; // Se asigna el resultado a la pantalla
 }
 
-
-
-//Funcion Cuadrado 
+//Funcion Cuadrado
 function calcularCuadrado() {
-  const screen = document.getElementsByClassName('screen'); // Se obtiene el primer elemento con nombre de clase 'screen'
+  const screen = document.getElementsByClassName("screen"); // Se obtiene el primer elemento con nombre de clase 'screen'
   const valores = screen.value.substring(0);
-  let resultado = Math.pow(valores,2);
+  let resultado = Math.pow(valores, 2);
   screen.value = resultado; // Se asigna el resultado a la pantalla
 }
-
-
-
 
 //Funcion igual que devuelve el resultado
 equalButton.addEventListener("click", () => {
@@ -163,22 +156,9 @@ equalButton.addEventListener("click", () => {
     }
   } else if (valoresCuadrado.length > 1) {
     resultado = parseFloat(valoresCuadrado[0]) ** 2;
-    
   } else {
     // No hay operación a realizar
     resultado = valorActual;
   }
   screen.value = resultado;
 });
-
-
-
-
-
-
-
-
-
-
-
-
